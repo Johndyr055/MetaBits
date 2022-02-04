@@ -4,168 +4,138 @@
   const ctx = canvas.getContext('2d');
 
   const drawComponents = () => {
-    ctx.fillStyle = 'rgb(0,0,0)';
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    var realWidth = canvas.width;
+    var realWidth04 = canvas.width * 0.04;
+    var realWidth05 = canvas.width * 0.05;
+    var realWidth07 = canvas.width * 0.07;
+    var realWidth08 = canvas.width * 0.08;
+    var realWidth10 = canvas.width * 0.1;
+    var realWidth12 = canvas.width * 0.12;
+    var realWidth15 = canvas.width * 0.15;
+    var realWidth70 = canvas.width * 0.7;
+    var realWidth85 = canvas.width * 0.85;
+    var realWidth88 = canvas.width * 0.88;
+    var realWidth90 = canvas.width * 0.9;
+    var realWidth92 = canvas.width * 0.92;
+    var realWidth93 = canvas.width * 0.93;
+    var realWidth95 = canvas.width * 0.95;
+
+    var realHeight = canvas.height;
+    var realHeight13 = canvas.height * 0.13;
+    var realHeight15 = canvas.height * 0.15;
+    var realHeight20 = canvas.height * 0.2;
+    var realHeight65 = canvas.height * 0.65;
+    var realHeight85 = canvas.height * 0.85;
+
+
+    var grd = ctx.createLinearGradient(0,realHeight65,0,realHeight);
+    grd.addColorStop(0,"black");
+    grd.addColorStop(1,"purple");
+    ctx.fillStyle = grd;
+    ctx.fillRect(0, 0, realWidth, realHeight);
 
     //Marco Izquierdo
-    ctx.fillStyle = 'rgba(105, 105, 105, 50)';
+    ctx.fillStyle = 'rgba(47, 44, 48, 50)';
     ctx.beginPath();
-    ctx.moveTo(canvas.width * 0.07, 0);
-    ctx.lineTo(canvas.width * 0.07, canvas.height * 0.15);
-    ctx.lineTo(canvas.width * 0.12, canvas.height * 0.2);
-    ctx.lineTo(canvas.width * 0.12, canvas.height * 0.85);
-    ctx.lineTo(canvas.width * 0.05, canvas.height);
-    ctx.lineTo(canvas.width * 0.08, canvas.height);
-    ctx.lineTo(canvas.width * 0.15, canvas.height * 0.85);
-    ctx.lineTo(canvas.width * 0.15, canvas.height * 0.2);
-    ctx.lineTo(canvas.width * 0.1, canvas.height * 0.15);
-    ctx.lineTo(canvas.width * 0.1, 0);
-    ctx.lineTo(canvas.width * 0.07, 0);
+    ctx.moveTo(realWidth07, 0);
+    ctx.lineTo(realWidth07, realHeight15);
+    ctx.lineTo(realWidth12, realHeight20);
+    ctx.lineTo(realWidth12, realHeight85);
+    ctx.lineTo(realWidth05, realHeight);
+    ctx.lineTo(realWidth08, realHeight);
+    ctx.lineTo(realWidth15, realHeight85);
+    ctx.lineTo(realWidth15, realHeight20);
+    ctx.lineTo(realWidth10, realHeight15);
+    ctx.lineTo(realWidth10, 0);
+    ctx.lineTo(realWidth07, 0);
     ctx.fill();
 
     //Marco Derecho
-    ctx.fillStyle = 'rgba(105, 105, 105, 50)';
+    ctx.fillStyle = 'rgba(47, 44, 48, 50)';
     ctx.beginPath();
-    ctx.moveTo(canvas.width * 0.93, 0);
-    ctx.lineTo(canvas.width * 0.93, canvas.height * 0.15);
-    ctx.lineTo(canvas.width * 0.88, canvas.height * 0.2);
-    ctx.lineTo(canvas.width * 0.88, canvas.height * 0.85);
-    ctx.lineTo(canvas.width * 0.95, canvas.height);
-    ctx.lineTo(canvas.width * 0.92, canvas.height);
-    ctx.lineTo(canvas.width * 0.85, canvas.height * 0.85);
-    ctx.lineTo(canvas.width * 0.85, canvas.height * 0.2);
-    ctx.lineTo(canvas.width * 0.9, canvas.height * 0.15);
-    ctx.lineTo(canvas.width * 0.9, 0);
-    ctx.lineTo(canvas.width * 0.93, 0);
+    ctx.moveTo(realWidth93, 0);
+    ctx.lineTo(realWidth93, realHeight15);
+    ctx.lineTo(realWidth88, realHeight20);
+    ctx.lineTo(realWidth88, realHeight85);
+    ctx.lineTo(realWidth95, realHeight);
+    ctx.lineTo(realWidth92, realHeight);
+    ctx.lineTo(realWidth85, realHeight85);
+    ctx.lineTo(realWidth85, realHeight20);
+    ctx.lineTo(realWidth90, realHeight15);
+    ctx.lineTo(realWidth90, 0);
+    ctx.lineTo(realWidth93, 0);
     ctx.fill();
 
-    //ctx.fillStyle = 'rgba(255, 0, 0, 50)';
-    //ctx.beginPath();
-    //ctx.moveTo(canvas.width * 0.08, 0);
-    //ctx.lineTo(canvas.width * 0.92, 0);
-    //ctx.lineTo(canvas.width * 0.92, canvas.height*0.1);
-    //ctx.lineTo(canvas.width * 0.08, canvas.height*0.1);
-    //ctx.lineTo(canvas.width * 0.08, 0);
-    //ctx.fill();
-
     //Relleno Top
-    ctx.fillStyle = 'rgba(255, 0, 0, 50)';
+    ctx.fillStyle = 'rgba(45, 36, 227, 50)';
     ctx.beginPath();
-    ctx.moveTo(canvas.width * 0.1, 0);
-    ctx.lineTo(canvas.width * 0.9, 0);
-    ctx.lineTo(canvas.width * 0.9, canvas.height*0.15);
-    ctx.lineTo(canvas.width * 0.1, canvas.height*0.15);
-    ctx.lineTo(canvas.width * 0.1, 0);
+    ctx.moveTo(realWidth10, 0);
+    ctx.lineTo(realWidth90, 0);
+    ctx.lineTo(realWidth90, realHeight15);
+    ctx.lineTo(realWidth10, realHeight15);
+    ctx.lineTo(realWidth10, 0);
     ctx.fill();
 
     //Relleno Top-Mid
-    ctx.fillStyle = 'rgba(245, 80, 80, 50)';
+    ctx.fillStyle = 'rgba(10, 3, 150, 50)';
     ctx.beginPath();
-    ctx.moveTo(canvas.width * 0.1, canvas.height*0.15);
-    ctx.lineTo(canvas.width * 0.9, canvas.height*0.15);
-    ctx.lineTo(canvas.width * 0.85, canvas.height*0.2);
-    ctx.lineTo(canvas.width * 0.15, canvas.height*0.2);
-    ctx.lineTo(canvas.width * 0.1, canvas.height*0.15);
+    ctx.moveTo(realWidth10, realHeight15);
+    ctx.lineTo(realWidth90, realHeight15);
+    ctx.lineTo(realWidth85, realHeight20);
+    ctx.lineTo(realWidth15, realHeight20);
+    ctx.lineTo(realWidth10, realHeight15);
     ctx.fill();
 
     //Relleno Bot
-    ctx.fillStyle = 'rgba(225, 219, 8, 50)';
+    ctx.fillStyle = 'rgba(58, 51, 189, 50)';
     ctx.beginPath();
-    ctx.moveTo(canvas.width * 0.08, canvas.height);
-    ctx.lineTo(canvas.width * 0.92, canvas.height);
-    ctx.lineTo(canvas.width * 0.85, canvas.height * 0.85);
-    ctx.lineTo(canvas.width * 0.15, canvas.height * 0.85);
-    ctx.lineTo(canvas.width * 0.08, canvas.height);
+    ctx.moveTo(realWidth08, realHeight);
+    ctx.lineTo(realWidth92, realHeight);
+    ctx.lineTo(realWidth85, realHeight85);
+    ctx.lineTo(realWidth15, realHeight85);
+    ctx.lineTo(realWidth08, realHeight);
     ctx.fill();
 
-    //insertar imágen
     var wrapper = document.getElementById('arcade-wrapper');
-    var x = (canvas.width/2) - 64;
-    var y = ((canvas.height * 0.15)/2) - 64;
+    var left = realWidth15;
+    var top = realHeight20;
 
-    var img = document.createElement('img');
-    img.src = "images\\Coin.png";
-    img.id = "imagen";
-    img.style.position = "absolute";
-    img.style.top = y + 'px';
-    img.style.left = x + 'px';
+    var coin = document.getElementById("coin");
+    coin.style.width = (realHeight13) + 'px';
+    coin.style.height = (realHeight13) + 'px';
+    coin.style.top = ((realHeight15 / 2) - (coin.clientWidth / 2)) + 'px';
+    coin.style.left = ((realWidth / 2) - (coin.clientHeight / 2)) + 'px';
 
-    wrapper.appendChild(img);
-
-    var wrapper = document.getElementById('arcade-wrapper');
-    var left = canvas.width * 0.15;
-    var top = canvas.height * 0.2;
-
-    var div_container = document.createElement('div');
-    div_container.className = "slideshow-container";
-    div_container.id = "slide";
-    div_container.style.position = "relative";
+    var div_container = document.getElementById('slide');
     div_container.style.left = left + 'px';
     div_container.style.top = top + 'px';
-    div_container.style.width = (canvas.width * 0.7) + 'px';
-    div_container.style.height = (canvas.height * 0.65) + 'px';
-    wrapper.appendChild(div_container);
+    div_container.style.width = (realWidth70) + 'px';
+    div_container.style.height = (realHeight65) + 'px';
 
-    var div_fade1 = document.createElement('div');
-    div_fade1.className = "mySlides fade";
-    div_container.appendChild(div_fade1);
+    var img1 = document.getElementById('img1');
+    img1.style.width = (realWidth70) + 'px';
+    img1.style.height = (realHeight65) + 'px';
 
-    var img1 = document.createElement('img');
-    img1.src = "images/udyr.jpg";
-    img1.style.width = (canvas.width * 0.7) + 'px';
-    img1.style.height = (canvas.height * 0.65) + 'px';
-    div_fade1.appendChild(img1);
+    var img2 = document.getElementById('img2');
+    img2.style.width = (realWidth70) + 'px';
+    img2.style.height = (realHeight65) + 'px';
 
-    var div_fade2 = document.createElement('div');
-    div_fade2.className = "mySlides fade";
-    div_container.appendChild(div_fade2);
+    var img3 = document.getElementById('img3');
+    img3.style.width = (realWidth70) + 'px';
+    img3.style.height = (realHeight65) + 'px';
 
-    var img2 = document.createElement('img');
-    img2.src = "images/nasus.jpg";
-    img2.style.width = (canvas.width * 0.7) + 'px';
-    img2.style.height = (canvas.height * 0.65) + 'px';
-    div_fade2.appendChild(img2);
+    var socialIcons = document.getElementsByClassName('socialImg');
+    for (var i = 0; i < socialIcons.length; i++) {
+      socialIcons[i].style.width = realWidth04 + 'px';
+      socialIcons[i].style.margin = "0px 0px 5px 0px";
+    }
 
-    var div_fade3 = document.createElement('div');
-    div_fade3.className = "mySlides fade";
-    div_container.appendChild(div_fade3);
+    var div_social = document.getElementById('social');
+    div_social.style.top = ((realHeight / 2) - ((socialIcons[0].clientWidth + 5) * 3)) + 'px';
+    div_social.style.right = 0;
+    div_social.style.width = socialIcons[0].clientWidth + 'px';
 
-    var img3 = document.createElement('img');
-    img3.src = "images/volibear.jpg";
-    img3.style.width = (canvas.width * 0.7) + 'px';
-    img3.style.height = (canvas.height * 0.65) + 'px';
-    div_fade3.appendChild(img3);
-
-    var a1 = document.createElement('a');
-    a1.className = "prev";
-    a1.onclick = function() {plusSlides(-1)};;
-    a1.text = "❮";
-    div_container.appendChild(a1);
-
-    var a2 = document.createElement('a');
-    a2.className = "next";
-    a2.onclick = function() {plusSlides(1)};
-    a2.text = "❯";
-    div_container.appendChild(a2);
-
-    var div_dots = document.createElement('div');
-    div_dots.style.textAlign = "center";
-    div_container.appendChild(div_dots);
-
-    var dot1 = document.createElement('span');
-    dot1.className = "dot";
-    dot1.onclick = function() {currentSlide(1)};
-    div_dots.appendChild(dot1);
-
-    var dot2 = document.createElement('span');
-    dot2.className = "dot";
-    dot2.onclick = function() {currentSlide(2)};
-    div_dots.appendChild(dot2);
-
-    var dot3 = document.createElement('span');
-    dot3.className = "dot";
-    dot3.onclick = function() {currentSlide(3)};
-    div_dots.appendChild(dot3);
   }
 
   const setUpCanvas = (w, h) => {
@@ -175,12 +145,6 @@
 
   const reset = () => {
 		ctx.clearRect(0, 0, canvas.width, canvas.height);
-    var wrapper = document.getElementById('arcade-wrapper');
-    var slide = document.getElementById('slide');
-    var imagen = document.getElementById('imagen');
-    wrapper.removeChild(slide);
-    wrapper.removeChild(imagen);
-
 		setUpCanvas(canvas.clientWidth, canvas.clientHeight);
 		drawComponents();
     showSlides(slideIndex);
@@ -209,9 +173,58 @@
     slides[slideIndex-1].style.display = "block";
   }
 
+  const s1 = document.getElementById('s1');
+  s1.onmouseover = function(){
+     this.src = "images/social1Pixel.png";
+  };
+  s1.onmouseout = function(){
+    this.src = "images/social1.png";
+  };
+
+  const s2 = document.getElementById('s2');
+  s2.onmouseover = function(){
+      this.src = "images/social2Pixel.png";
+  };
+  s2.onmouseout = function(){
+    this.src = "images/social2.png";
+  };
+
+  const s3 = document.getElementById('s3');
+  s3.onmouseover = function(){
+      this.src = "images/social3Pixel.png";
+  };
+  s3.onmouseout = function(){
+    this.src = "images/social3.png";
+  };
+
+  const s4 = document.getElementById('s4');
+  s4.onmouseover = function(){
+      this.src = "images/social4Pixel.png";
+  };
+  s4.onmouseout = function(){
+    this.src = "images/social4.png";
+  };
+
+  const s5 = document.getElementById('s5');
+  s5.onmouseover = function(){
+      this.src = "images/social5Pixel.png";
+  };
+  s5.onmouseout = function(){
+    this.src = "images/social5.png";
+  };
+
+  const s6 = document.getElementById('s6');
+  s6.onmouseover = function(){
+      this.src = "images/social6Pixel.png";
+  };
+  s6.onmouseout = function(){
+    this.src = "images/social6.png";
+  };
+
   setUpCanvas(canvas.clientWidth, canvas.clientHeight);
   drawComponents();
   showSlides(slideIndex);
+
   /** EVENT LISTENERS ***/
   window.addEventListener('resize', () => {
     reset();

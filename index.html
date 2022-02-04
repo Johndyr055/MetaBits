@@ -10,11 +10,43 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body>
+<body id = "bodyArcade">
   <div id="arcade-wrapper">
     <canvas class="arcade">
       <p>La concha, no funciona!!!</p>
     </canvas>
+
+    <img id="coin" src="images/Coin2.png" alt=""></img>
+
+    <div class = "slideshow-container" id = "slide">
+      <div class="mySlides fade">
+        <img id="img1" src="images/MetaBits.jpg" alt="">
+      </div>
+      <div class="mySlides fade">
+        <img id="img2" src="images/udyr.jpg" alt="">
+      </div>
+      <div class="mySlides fade">
+        <img id="img3" src="images/nasus.jpg" alt="">
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+
+      <div class="div_dots">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+    </div>
+
+    <div id="social">
+      <a class="socialIcon" target="_blank" href="https://www.twitter.com"><img id="s1" class = "socialImg" src="images/social1.png" alt=""></a>
+      <a class="socialIcon" target="_blank" href="https://www.youtube.com"><img id="s2" class = "socialImg" src="images/social2.png" alt=""></a>
+      <a class="socialIcon" target="_blank" href="https://www.twitch.com"><img id="s3" class = "socialImg" src="images/social3.png" alt=""></a>
+      <a class="socialIcon" target="_blank" href="https://web.telegram.org/"><img id="s4" class = "socialImg" src="images/social4.png" alt=""></a>
+      <a class="socialIcon" target="_blank" href="https://discord.gg/hvjAgheMFr"><img id="s5" class = "socialImg" src="images/social5.png" alt=""></a>
+      <a class="socialIcon" target="_blank" href="https://www.instagram.com"><img id="s6" class = "socialImg" src="images/social6.png" alt=""></a>
+    </div>
   </div>
 
   <script src="js/index.js"></script>
